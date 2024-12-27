@@ -62,11 +62,24 @@
     display: flex;
     justify-content: flex-start;
 }
+.space-between{
+    justify-content: space-between;
+}
+.space-around{
+    justify-content: space-around;
+}
+.space-evenly{
+    justify-content: space-evenly;
+}
 
 .align-items-center {
     display: flex;
     align-items: center;
 }
+.items-center{
+    align-items: center;
+}
+
 
 /* widths */
 .w-max-content {
@@ -381,3 +394,6 @@ margin-inline: .25rem ;
     color: rgb(46, 139, 131);
 }
 
+.underline{
+    text-decoration: underline;
+}
