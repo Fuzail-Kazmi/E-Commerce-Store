@@ -36,19 +36,19 @@ export const SpecilOffers = () => {
     {
       id: "1",
       price: "12.00",
-      badge: "5 Stock Left",
+      badge: "5 Left",
       image: "https://mobirise.com/extensions/commercem4/assets/images/1.jpg",
     },
     {
       id: "2",
       price: " 15.00",
-      badge: "3 Stock Left",
+      badge: "3 Left",
       image: "https://mobirise.com/extensions/commercem4/assets/images/3.jpg",
     },
     {
       id: "3",
       price: " 1.00",
-      badge: "1 Stock Left",
+      badge: "1 Left",
       image: "https://mobirise.com/extensions/commercem4/assets/images/2.jpg",
     },
   ];

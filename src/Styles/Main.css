@@ -260,7 +260,7 @@ a {
     height: 90px;
   }
   .badge-name{
-    font-size: .6rem;
+    font-size: .75rem;
   }
 }
 @media (min-width: 600px) {
