@@ -69,6 +69,7 @@ export const Category = () => {
           <div className="categories-main__container">
             {categoryBoxData.map((item) => {
               return (
+                <NavLink to="/products">
                 <div className="categories-main" key={item.id} id={item.id}>
                   <div className="categories-items">
                     <div
@@ -79,6 +80,7 @@ export const Category = () => {
                     {item.category || "No Category"}
                   </div>
                 </div>
+                </NavLink>
               );
             })}
           </div>

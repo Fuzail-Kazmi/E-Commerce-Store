@@ -342,7 +342,7 @@ a {
   }
   .offer-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
     max-width: 100%;
   }
@@ -357,5 +357,11 @@ a {
 @media (min-width: 900px) {
   .carousel-container {
     height: 300px;
+  }
+  .offer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    max-width: 100%;
   }
 }
