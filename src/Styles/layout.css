@@ -1,14 +1,83 @@
 /* badges */
 
-.hot-badge{
-   
+.hot-badge {
+  background-color: #feb431;
+  color: white;
+  border-radius: 1.5rem;
+  position: relative;
 }
-.discount-badge{
-
+.hot-badge-left {
+    background: url(https://cdn-icons-png.flaticon.com/512/4090/4090424.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0px;
+    height: 5.73333vw;
+    left: -0.9vw;
+    position: absolute;
+    width: 5.73333vw;
+    z-index: 5;
 }
-.outOfStock-badge{
-
+.discount-badge {
+    background-color: #fe4949;
+    color: white;
+    border-radius: 1.5rem;
+    position: relative;
 }
-.itemLeft-badge{
-
+.discount-badge-left {
+    background: url(https://cdn-icons-png.flaticon.com/512/272/272498.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0px;
+    height: 5.73333vw;
+    left: -0.9vw;
+    position: absolute;
+    width: 5.73333vw;
+    z-index: 5;
+}
+.outOfStock-badge {
+    background-color: #fe646f;
+    color: white;
+    border-radius: 1.5rem;
+    position: relative;
+}
+.outOfStock-badge-left {
+    background: url(https://cdn-icons-png.flaticon.com/512/5632/5632442.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0px;
+    height: 5.73333vw;
+    left: -0.9vw;
+    position: absolute;
+    width: 5.73333vw;
+    z-index: 5;
+}
+.sale-badge {
+    background-color: #fc3636;
+    color: white;
+    border-radius: .5rem;
+    position: relative;
+}
+.percentage-badge{
+    background-color: #ffffff;
+    color: #fc3636;
+    border-radius: .5rem;
+    position: relative;
+}
+.percentOff-badge{
+    font-size: .75rem;
+    color: gray;
+    text-decoration: line-through;
+}
+.low-stock-badge{
+    background-color: #ffd630;
+    color: #fff;
+    border-radius: 1.5rem;
+}
+.bestseller-badge{
+    background-color: #2b2b2b;
+    color: #fff;
+    border-radius: .5rem;
 }

@@ -409,6 +409,45 @@
 .py-10 {
   padding-block: 2.5rem;
 }
+.px-1 {
+  padding-inline: 0.25rem;
+}
+
+.px-2 {
+  padding-inline: 0.5rem;
+}
+
+.px-3 {
+  padding-inline: 0.75rem;
+}
+
+.px-4 {
+  padding-inline: 1rem;
+}
+
+.px-5 {
+  padding-inline: 1.25rem;
+}
+
+.px-6 {
+  padding-inline: 1.5rem;
+}
+
+.px-7 {
+  padding-inline: 1.75rem;
+}
+
+.px-8 {
+  padding-inline: 2rem;
+}
+
+.px-9 {
+  padding-inline: 2.25rem;
+}
+
+.px-10 {
+  padding-inline: 2.5rem;
+}
 
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -640,7 +679,6 @@
   color: #fe4960;
 }
 
-
 .hr-preset1 {
   border: none;
   height: 0.1px;
@@ -660,8 +698,8 @@
 .rating-num {
   color: #2e8b83;
 }
-.no-spacing{
-    word-spacing: -5px;
+.no-spacing {
+  word-spacing: -5px;
 }
 .underline {
   text-decoration: underline;
