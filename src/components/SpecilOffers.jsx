@@ -176,7 +176,7 @@ export const SpecilOffers = () => {
                     </div>
                     <div className="special-sec__badge text-sm py-1 mt-3 text-center">
                       <div className="badge-left"></div>
-                      <div>{item.badge}</div>
+                      <div className="badge-name">{item.badge}</div>
                     </div>
                   </div>
                 </NavLink>

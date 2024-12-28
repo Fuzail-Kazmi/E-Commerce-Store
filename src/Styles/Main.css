@@ -238,11 +238,11 @@ a {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: contain;
-  bottom: 2px;
-  height: 6.73333vw;
+  bottom: 0px;
+  height: 5.73333vw;
   left: -0.9vw;
   position: absolute;
-  width: 6.73333vw;
+  width: 5.73333vw;
   z-index: 5;
 }
 .special-sec__main{
@@ -255,16 +255,16 @@ a {
   background-color: #9e9e9e33;
 }
 /* category box */
+@media (min-width: 430px) {
+  .badge-name{
+    font-size: .75rem;
+  }
+}
 @media (min-width: 600px) {
   .special-sec__img {
     height: 150px;
 }
-.badge-left {
-  bottom: 2px;
-  height: 5.73333vw;
-  left: -0.9vw;
-  width: 5.73333vw;
-}
+
 }
 @media (min-width: 768px) {
   .navbar {
