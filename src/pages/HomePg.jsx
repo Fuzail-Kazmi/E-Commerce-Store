@@ -8,7 +8,7 @@ export const HomePg = () => {
     <div>
       <Carousel/>
       <SpecilOffers/>
-      {/* <Category/> */}
+      <Category/>
     </div>
   )
 }

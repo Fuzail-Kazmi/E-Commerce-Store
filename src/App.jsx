@@ -9,6 +9,7 @@ import {HomePg} from "./pages/HomePg"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./Styles/Main.css"
+import "./Styles/layout.css"
 import "./Styles/utils.css"
 
 function App() {
@@ -38,6 +39,12 @@ function App() {
     {
       path: "/products",
       element: <> <Navbar /> <Products /> </>,
+    },
+    {
+      path: "/products/:product",
+      element: (
+        <> <Navbar /> <Products /> </>
+      ),
     },
     {
       path: "/items",
