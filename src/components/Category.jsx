@@ -76,7 +76,7 @@ export const Category = () => {
                       style={{ backgroundImage: `url(${item.image})` }}
                     ></div>
                   </div>
-                  <div className="categories-title text-center">
+                  <div className="categories-title text-center text-xs mt-1">
                     {item.category || "No Category"}
                   </div>
                 </div>
