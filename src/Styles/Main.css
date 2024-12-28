@@ -255,9 +255,12 @@ a {
   background-color: #9e9e9e33;
 }
 /* category box */
-@media (min-width: 430px) {
+@media (max-width: 430px) {
+  .special-sec__img{
+    height: 90px;
+  }
   .badge-name{
-    font-size: .75rem;
+    font-size: .6rem;
   }
 }
 @media (min-width: 600px) {
