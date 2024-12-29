@@ -57,7 +57,7 @@
 .sale-badge {
     background-color: #fc3636;
     color: white;
-    border-radius: .5rem;
+    border-radius: .35rem;
     position: relative;
 }
 .percentage-badge{
@@ -72,12 +72,12 @@
     text-decoration: line-through;
 }
 .low-stock-badge{
-    background-color: #ffd630;
+    background-color: #ff8a30e5;
     color: #fff;
-    border-radius: 1.5rem;
+    border-radius: .25rem;
 }
 .bestseller-badge{
     background-color: #2b2b2b;
     color: #fff;
-    border-radius: .5rem;
+    border-radius: .25rem;
 }
