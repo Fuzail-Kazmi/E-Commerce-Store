@@ -72,12 +72,12 @@ export const SpecilOffers = () => {
         <div className="offer-wrapper my-2 mt-8">
           {offerBoxData.map((item) => {
             return (
-              <div className="offer-box">
+              <div className="offer-box" key={item.id}>
                 <div className="offer-box__head text-md font-semibold ">
                   {offerBoxData[offerBoxes]?.title}
                 </div>
                 <div className="offer-box__main">
-                  <div className="offer-main" key={item.id} id={item.id}>
+                  <div className="offer-main" id={item.id}>
                     <div className="offer-main__img">
                       <div
                         style={{
@@ -161,8 +161,8 @@ export const SpecilOffers = () => {
           <div className="special-sec__container">
             {specialOfferData.map((item) => {
               return (
-                <NavLink to="/products">
-                  <div className="special-sec__main" key={item.id} id={item.id}>
+                <NavLink to="/products" key={item.id}>
+                  <div className="special-sec__main" id={item.id}>
                     <div className="special-sec__img">
                       <div
                         style={{ backgroundImage: `url(${item.image})` }}

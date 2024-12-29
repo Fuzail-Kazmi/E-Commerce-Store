@@ -1,8 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa6";
+import { useState,useEffect } from "react";
 
 export const Category = () => {
+const [categoryData, setcategoryData] = useState([])
+
+    const fetchData = async () => {
+      let a = await fetch("https://api.escuelajs.co/api/v1/categories");
+      let data = await a.json();
+      setcategoryData(data); 
+    };
+  
+    useEffect(() => {
+      fetchData();
+    }, []);
   const categoryBoxData = [
     {
       id: "1",
@@ -67,17 +79,17 @@ export const Category = () => {
             </div>
           </div>
           <div className="categories-main__container">
-            {categoryBoxData.map((item) => {
+            {categoryData.map((item) => {
               return (
-                <NavLink to="/products">
-                <div className="categories-main" key={item.id} id={item.id}>
+                <NavLink to="/products" key={item.id}>
+                <div className="categories-main" id={item.id}>
                   <div className="categories-items">
                     <div
                       style={{ backgroundImage: `url(${item.image})` }}
                     ></div>
                   </div>
                   <div className="categories-title text-center text-xs mt-1">
-                    {item.category || "No Category"}
+                    {item.name || "No Category"}
                   </div>
                 </div>
                 </NavLink>

@@ -1,69 +1,102 @@
-import { Navbar } from "./components/Navbar"
-import {Login} from "./pages/Login"
-import {SignUp} from "./pages/SignUp"
-import {Cart} from "./pages/Cart"
-import {Products} from "./pages/Products"
-import {Items} from "./pages/Items"
-import {Wishlist} from "./pages/Wishlist"
-import {HomePg} from "./pages/HomePg"
+import { Navbar } from "./components/Navbar";
+import { Login } from "./pages/Login";
+import { SignUp } from "./pages/SignUp";
+import { Cart } from "./pages/Cart";
+import { Products } from "./pages/Products";
+import { Items } from "./pages/Items";
+import { Wishlist } from "./pages/Wishlist";
+import { HomePg } from "./pages/HomePg";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import "./Styles/Main.css"
-import "./Styles/layout.css"
-import "./Styles/utils.css"
+import "./Styles/Main.css";
+import "./Styles/layout.css";
+import "./Styles/utils.css";
 
 function App() {
   const ErrorPage = () => {
-   return <><HomePg/></>
+    return (
+      <>
+        <HomePg /> 
+      </>
+    );
   };
 
-   const router = createBrowserRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
-      element: <> <Navbar /> < HomePg/> </>
-      
+      element: (
+        <>
+           <Navbar /> <HomePg /> 
+        </>
+      ),
     },
     {
       path: "/login",
-      element: <> <Navbar /> <Login /> </>
-      
+      element: (
+        <>
+          <Navbar /> <Login />
+        </>
+      ),
     },
     {
       path: "/signup",
-      element: <> <Navbar /> <SignUp /> </>,
+      element: (
+        <>
+          <Navbar /> <SignUp /> 
+        </>
+      ),
     },
     {
       path: "/cart",
-      element: <> <Navbar /> <Cart /> </>,
+      element: (
+        <>
+          <Navbar /> <Cart /> 
+        </>
+      ),
     },
     {
       path: "/products",
-      element: <> <Navbar /> <Products /> </>,
+      element: (
+        <>
+          <Navbar /> <Products /> 
+        </>
+      ),
     },
     {
       path: "/products/:product",
       element: (
-        <> <Navbar /> <Products /> </>
+        <>
+          <Navbar /> <Products /> 
+        </>
       ),
     },
     {
       path: "/items",
-      element: <> <Navbar /> <Items /> </>,
+      element: (
+        <>
+          <Navbar /> <Items /> 
+        </>
+      ),
     },
     {
       path: "/wishlist",
-      element: <> <Navbar /> <Wishlist /> </>,
+      element: (
+        <>
+          <Navbar /> <Wishlist /> 
+        </>
+      ),
     },
     {
-      path: "*", 
+      path: "*",
       element: <ErrorPage />,
     },
   ]);
   return (
     <>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;
