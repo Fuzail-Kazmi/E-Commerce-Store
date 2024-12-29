@@ -293,7 +293,34 @@ text-overflow: ellipsis;
 .products-pg__container{
   padding-inline: 1.25rem;
 }
+.filter-box {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
 
+.filter-box.visible {
+  display: block;
+}
+
+.filter-box.hidden {
+  display: none;
+}
+.min-max-input{
+  padding: .5rem .5rem;
+  width: 70px;
+  border: 1px solid #d9d9d9;
+  border-radius: .25rem;
+  outline: none;
+}
+.ok-btn{
+  padding: 0.4rem .75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: white;
+  background-color: #3f3f3f;
+  border: none;
+  outline: none;
+}
 .product-pg__main{
   display: grid;
   grid-template-columns: repeat(2,1fr);

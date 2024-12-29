@@ -3,6 +3,7 @@ import { Filter, ThumbsUp, ChevronsUpDown } from "lucide-react";
 import { RiFireLine } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import { BsDash } from "react-icons/bs";
 
 export const Products = () => {
   const [productData, setproductData] = useState([]);
@@ -18,10 +19,12 @@ export const Products = () => {
   }, []);
   const params = useParams();
 
-  const handleFilter = (e) => {
-    {e.target.value === "true" && "false"}  
-    console.log("click")
+  const [isFilterVisible, setIsFilterVisible] = useState(false);
+
+  const handleFilter = () => {
+    setIsFilterVisible((prev) => !prev);
   };
+
   return (
     <>
       <div className="products-pg__container">
@@ -70,6 +73,25 @@ export const Products = () => {
           <div className="flex" value="false" onClick={handleFilter}>
             <Filter height={18} />
             <div className="text-sm">Filter</div>
+          </div>
+        </div>
+        <hr className="hr-preset1 mb-3" />
+        <div className={`filter-box ${isFilterVisible ? "visible" : "hidden"}`}>
+          <div className="flex items-center gap-1 mt-2 mb-4">
+            <div className="flex items-center gap-1">
+              <input
+                placeholder="Min"
+                type="number"
+                className="min-max-input text-xs"
+              />
+              <BsDash color="#2d2d2d;" className="text-xs" />
+              <input
+                placeholder="Max"
+                type="number"
+                className="min-max-input text-xs"
+              />
+            </div>
+            <button className="ok-btn">Ok</button>
           </div>
         </div>
         <div className="product-pg__main">
