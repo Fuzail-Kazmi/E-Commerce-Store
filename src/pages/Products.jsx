@@ -31,10 +31,11 @@ export const Products = () => {
         <div className="flex items-center space-between my-3">
           <div className="flex items-center gap-2">
             <NavLink
-              to=""
-              className={(e) => {
-                return e.isActive ? "color-change" : "";
-              }}
+              to="/best-match"
+              // className={(e) => {
+              //   return e.isActive ? "color-change" : "";
+              // }}
+              className={({ isActive }) => (isActive ? "color-change" : "")}
             >
               <div className="flex">
                 <div className="text-xs">Best Match</div>
@@ -44,10 +45,11 @@ export const Products = () => {
               </div>
             </NavLink>
             <NavLink
-              to=""
-              className={(e) => {
-                return e.isActive ? "color-change" : "";
-              }}
+              to="/sale"
+              // className={(e) => {
+              //   return e.isActive ? "color-change" : "";
+              // }}
+              className={({ isActive }) => (isActive ? "color-change" : "")}
             >
               <div className="flex gap">
                 <div className="text-xs">Sale</div>
@@ -57,10 +59,11 @@ export const Products = () => {
               </div>
             </NavLink>
             <NavLink
-              to=""
-              className={(e) => {
-                return e.isActive ? "color-change" : "";
-              }}
+              to="/price"
+              // className={(e) => {
+              //   return e.isActive ? "color-change" : "";
+              // }}
+              className={({ isActive }) => (isActive ? "color-change" : "")}
             >
               <div className="flex">
                 <div className="text-xs">Price</div>
@@ -70,14 +73,14 @@ export const Products = () => {
               </div>
             </NavLink>
           </div>
-          <div className="flex" value="false" onClick={handleFilter}>
+          <div className="flex" onClick={handleFilter}>
             <Filter height={18} />
             <div className="text-sm">Filter</div>
           </div>
         </div>
         <hr className="hr-preset1 mb-3" />
-        <div className={`filter-box ${isFilterVisible ? "visible" : "hidden"}`}>
-          <div className="flex items-center gap-1 mt-2 mb-4">
+        <div className={`filter-box ${isFilterVisible ? "visible" : "hidden"} `}>
+          <div className="flex items-center gap-1 mt-2 mb-4 cursor-pointer">
             <div className="flex items-center gap-1">
               <input
                 placeholder="Min"

@@ -63,6 +63,30 @@ function App() {
       ),
     },
     {
+      path: "/best-match",
+      element: (
+        <>
+          <Navbar /> <Products /> 
+        </>
+      ),
+    },
+    {
+      path: "/sale",
+      element: (
+        <>
+          <Navbar /> <Products /> 
+        </>
+      ),
+    },
+    {
+      path: "/price",
+      element: (
+        <>
+          <Navbar /> <Products /> 
+        </>
+      ),
+    },
+    {
       path: "/products/:product",
       element: (
         <>

@@ -33,15 +33,15 @@ export const RelatedProducts = () => {
                       style={{ backgroundImage: `url(${item.images[0]})` }}
                     ></div>
                   </div>
-                  <div className="related-product__title text-sm">
+                  <div className="related-product__title text-sm font-semibold">
                     {item.title}
                   </div>
                   <div className="related-product__price text-sm font-semibold">
                     <span className="text-xs">$</span>
-                    {item.price}{" "}
-                    <span className="percentOff-badge text-xxs">
+                    {item.price}
+                    <span className="percentOff-badge text-xxs pl-1">
                       {item.discountPercentage}
-                    </span>{" "}
+                    </span>
                   </div>
                   <div className="related-product__rating flex gap items-center">
                     <div className="text-xxs">⭐ ({item.rating})</div>
