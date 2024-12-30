@@ -70,7 +70,7 @@ export const Navbar = () => {
                     <li>Cart</li>
                   </NavLink>
                   <div className="flex flex-column gap-3">
-                    <NavLink to="" className="flex gap items-center">
+                    <NavLink className="flex gap items-center" onClick={handleIcon} >
                       <div className="flex gap">
                         <List height={18} />
                         <li>Category</li>
@@ -78,7 +78,6 @@ export const Navbar = () => {
                       <div className="more-category">
                         <div
                           className="more-category__btn"
-                          onClick={handleIcon} // Toggles dropdown visibility and arrow
                         >
                           {isIconVisible ? (
                             <div className="category-btn__downArrow">
