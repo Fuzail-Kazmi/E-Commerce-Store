@@ -84,6 +84,10 @@
   background-color: #2b2b2b;
   color: #fff;
   border-radius: 0.25rem;
+  overflow-y: scroll;
+}
+.bestseller-badge::-webkit-scrollbar{
+  display: none;
 }
 /* Navbar styles */
 .navbar {
