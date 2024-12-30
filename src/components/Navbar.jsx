@@ -98,33 +98,33 @@ export const Navbar = () => {
                         isIconVisible ? "visible" : "hidden"
                       }`}
                     >
-                      <NavLink to="" className="flex gap">
+                      <NavLink to="" className="flex gap items-center">
                         <Cable height={18} />
-                        <li>Electronics</li>
+                        <li className="text-xs">Electronics</li>
                       </NavLink>
-                      <NavLink to="" className="flex gap">
+                      <NavLink to="" className="flex gap items-center">
                         <Baby height={18} />
-                        <li>Baby Care</li>
+                        <li className="text-xs">Baby Care</li>
                       </NavLink>
-                      <NavLink to="" className="flex gap">
+                      <NavLink to="" className="flex gap items-center">
                         <Armchair height={18} />
-                        <li>Home & Lifestyle</li>
+                        <li className="text-xs">Home & Lifestyle</li>
                       </NavLink>
-                      <NavLink to="" className="flex gap">
+                      <NavLink to="" className="flex gap items-center">
                         <GiClothes height={18} />
-                        <li>Clothes</li>
+                        <li className="text-xs">Clothes</li>
                       </NavLink>
-                      <NavLink to="" className="flex gap">
+                      <NavLink to="" className="flex gap items-center">
                         <Watch height={18} />
-                        <li>Accessories</li>
+                        <li className="text-xs">Accessories</li>
                       </NavLink>
-                      <NavLink to="" className="flex gap">
+                      <NavLink to="" className="flex gap items-center">
                         <Dribbble height={18} />
-                        <li>Sports & Outdoor</li>
+                        <li className="text-xs">Sports & Outdoor</li>
                       </NavLink>
-                      <NavLink to="" className="flex gap">
+                      <NavLink to="" className="flex gap items-center">
                         <Car height={18} />
-                        <li>Automotive</li>
+                        <li className="text-xs">Automotive</li>
                       </NavLink>
                     </ul>
                   </div>
