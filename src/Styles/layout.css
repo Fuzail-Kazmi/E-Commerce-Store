@@ -61,9 +61,11 @@
   z-index: 5;
 }
 .sale-badge {
-  background-color: #fc3636;
-  color: white;
-  border-radius: 0.35rem;
+  background-color: #ffd5dcb8;
+  color: #fe4960;
+  border-radius: 3px;
+  font-weight: 500;
+  padding: 0 3px;
 }
 .percentage-badge {
   background-color: #ffffff;
