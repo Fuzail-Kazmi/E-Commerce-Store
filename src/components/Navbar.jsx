@@ -161,8 +161,8 @@ export const Navbar = () => {
               </div>
             </div>
             <div className="menu cursor-pointer" onClick={handleMenu}>
-              {/* <Menu height={20}/> */}
-              <HiAdjustmentsHorizontal className="svg" />
+              <Menu height={22}/>
+              {/* <HiAdjustmentsHorizontal className="svg" /> */}
             </div>
           </div>
           <div className="logo">
