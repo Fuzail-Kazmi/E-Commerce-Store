@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { RiQuestionnaireLine } from "react-icons/ri";
+import { MdQuestionAnswer } from "react-icons/md";
 
 export const Items = () => {
   const slides = [
@@ -35,7 +37,6 @@ export const Items = () => {
     let a = await fetch("https://dummyjson.com/products/1");
     let data = await a.json();
     setItemsData([data]);
-    console.log(data);
   };
 
   useEffect(() => {
@@ -168,26 +169,33 @@ export const Items = () => {
                           Ratings and Reviews (
                           {item.reviews ? item.reviews.length : 0})
                         </div>
-                        <NavLink>View All</NavLink>
+                        <NavLink className="color-pink">View All</NavLink>
                       </div>
                       <div className="review-sec">
                         {item.reviews && item.reviews.length > 0 ? (
                           item.reviews.map((review, index) => (
                             <div key={index} className="review-container">
                               <div className="review-box">
-                              <div className="flex items-center space-between">
-                                <div className="flex gap flex-column color-gray text-sm">
-                                  <div>{review.reviewerName}</div>
-                                  <div className="text-xs">{review.date}</div>
+                                <div className="flex items-center space-between">
+                                  <div className="flex gap flex-column color-gray text-sm">
+                                    <div>{review.reviewerName}</div>
+                                    <div className="text-xs">{review.date}</div>
+                                  </div>
+                                  <div className="flex items-center text-xs">
+                                    ⭐({review.rating})
+                                  </div>
                                 </div>
-                                <div className="flex items-center text-xs">
-                                  ⭐({review.rating})
+                                <div className="text-sm py-3">
+                                  {review.comment}
                                 </div>
-                              </div>
-                              <div className="text-sm py-3">{review.comment}</div>
-                              <div className="review-img__box">
-                                <div className="review-img" style={{backgroundImage: `url(${item.images})`}}></div>
-                              </div>
+                                <div className="review-img__box">
+                                  <div
+                                    className="review-img"
+                                    style={{
+                                      backgroundImage: `url(${item.images})`,
+                                    }}
+                                  ></div>
+                                </div>
                               </div>
                             </div>
                           ))
@@ -197,8 +205,42 @@ export const Items = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="items-faq__sec"></div>
-                  <div className="related-products"></div>
+                  <div className="items-faq__sec my-3">
+                    <div className="flex space-between items-center text-sm">
+                      <div className="color-gray">
+                        Questions about this product (
+                        {item.question ? item.reviews.length : 0})
+                      </div>
+                      <NavLink className="color-pink">View All</NavLink>
+                    </div>
+                    <div className="faq-box">
+                      <div className="question-box flex flex-column gap-1 mt-3 py-5">
+                        <div className="flex items-center gap-2 color-gray-500">
+                          <div className="text-md">
+                            <RiQuestionnaireLine />
+                          </div>
+                          <div className="text-sm">Hello</div>
+                        </div>
+                        <div className="flex items-center gap-2 color-gray-500">
+                          <div className="text-md">
+                            <MdQuestionAnswer />
+                          </div>
+                          <div className="text-sm">Hi</div>
+                        </div>
+                      </div>
+                      <hr className="hr-preset2" />
+                      <NavLink className="justify-content-center color-pink font-semibold py-5">Ask Questions</NavLink>
+                    </div>
+                  </div>
+                  <div className="items-description my-5">
+                    <div className="color-gray text-sm my-2">Description</div>
+                    <hr className="hr-preset1"/>
+                    <div className="text-sm my-3 mb-15">{item.description}</div>
+                  </div>
+                  <div className="items-pg__btns">
+                    <button>Add to Cart</button>
+                    <button>Buy Now</button>
+                  </div>
                 </>
               );
             })}

@@ -791,8 +791,7 @@
   border: none;
   height: 0.1px;
   background-color: #c9c9c9;
-  display: flex;
-  flex-direction: row;
+  margin-inline: .5rem;
 }
 
 .unset {
@@ -809,4 +808,10 @@
 }
 .color-gray{
   color: #a3a3a3c6;
+}
+.color-gray-500{
+  color: #505050;
+}
+.color-pink{
+  color: #fe4960;
 }

@@ -467,3 +467,31 @@ a {
   align-items: center;
   color: #fe4960;
 }
+.faq-box{
+  background-color: #ededed;
+}
+.question-box{
+  background-color: #ebebeb;
+  padding: 0.75rem 0.75rem;
+  margin-bottom: .25rem;
+}
+.items-pg__btns{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0 ;
+}
+.items-pg__btns button{
+ border: none;
+ padding: .95rem;
+ color: white;
+ font-size: .95rem;
+}
+.items-pg__btns button:nth-child(1){
+ background-color: #3f3f3f;
+}
+.items-pg__btns button:nth-child(2){
+  background-color: #fe4960;
+}
