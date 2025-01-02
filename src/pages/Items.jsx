@@ -1,25 +1,29 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { LuDot } from "react-icons/lu";
+import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export const Items = () => {
   const slides = [
     {
+      id: 1,
       url: "https://mobirise.com/extensions/commercem4/assets/images/1.jpg",
     },
     {
+      id: 2,
       url: "https://mobirise.com/extensions/commercem4/assets/images/3.jpg",
     },
     {
+      id: 3,
       url: "https://mobirise.com/extensions/commercem4/assets/images/2.jpg",
     },
 
     {
+      id: 4,
       url: "https://images.unsplash.com/photo-1557821552-17105176677c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGUlMjBjb21tZXJjZSUyMGNhcm91c2VsfGVufDB8MHwwfHx8MA%3D%3D",
     },
     {
+      id: 5,
       url: "https://plus.unsplash.com/premium_photo-1677995700883-30df169c7517?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGUlMjBjb21tZXJjZSUyMGNhcm91c2VsfGVufDB8MHwwfHx8MA%3D%3D",
     },
   ];
@@ -97,21 +101,101 @@ export const Items = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="product-info">
-                      <div>Spexc</div>
-                      <p>Brand</p>
-                      <p>{item.brand}</p>
-                      <p>Category</p>
-                      <p>{item.category}</p>
-                      <p>Warranty Information</p>
-                      <p>{item.warrantyInformation}</p>
-                      <p>Shipping Information</p>
-                      <p>{item.shippingInformation}</p>
-                      <p>Return Policy</p>
-                      <p>{item.returnPolicy}</p>
+                    <div className="items-color__sec my-3">
+                      <div>
+                        <span className="text-sm color-gray">
+                          Product Option:
+                        </span>
+                        <span className="text-xs pl-1">{item.option}</span>
+                      </div>
+                      <div className="items-color__container">
+                        <div className="items-color">
+                          <div
+                            className="items-colorBoxes"
+                            style={{
+                              backgroundImage: `url(${item.images})`,
+                            }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="item-about"></div>
-                    <div className="item-review"></div>
+                    <div className="specification-info flex items-center space-between mb-2">
+                      <div className="specification-left flex items-center gap-1">
+                        <div className="text-sm color-gray">
+                          Specifications:
+                        </div>
+                        <div className="product-info text-xs">
+                          {item.brand},{item.category}
+                        </div>
+                      </div>
+                      <NavLink
+                        to="/specification"
+                        className="specification-right color-gray"
+                      >
+                        <ChevronRight size={15} />
+                      </NavLink>
+                    </div>
+                    <div className="item-services my-4">
+                      <div className="items-pg__delivery flex space-between items-start">
+                        <div className="text-sm color-gray">Delivery</div>
+                        <div className="text-xs flex flex-column gap">
+                          <div className="text-xs">
+                            Address Not Define Enter your address
+                          </div>
+                          <div>Arrive In: {item.shippingInformation}</div>
+                        </div>
+                        <NavLink to="/address" className="color-gray">
+                          <ChevronRight size={15} />
+                        </NavLink>
+                      </div>
+                      <hr className="hr-preset1 my-4" />
+                      <div className="items-pg__services flex space-between items-start">
+                        <div className="text-sm color-gray">Services</div>
+                        <div className="text-xs flex flex-column gap">
+                          <li>{item.returnPolicy}</li>
+                          <li className="text-xs">
+                            {item.warrantyInformation}
+                          </li>
+                        </div>
+                        <NavLink to="/services" className="color-gray">
+                          <ChevronRight size={15} />
+                        </NavLink>
+                      </div>
+                    </div>
+                    <div className="item-review flex flex-column gap-2 my-3">
+                      <div className="flex space-between items-center text-sm">
+                        <div className="color-gray">
+                          Ratings and Reviews (
+                          {item.reviews ? item.reviews.length : 0})
+                        </div>
+                        <NavLink>View All</NavLink>
+                      </div>
+                      <div className="review-sec">
+                        {item.reviews && item.reviews.length > 0 ? (
+                          item.reviews.map((review, index) => (
+                            <div key={index} className="review-container">
+                              <div className="review-box">
+                              <div className="flex items-center space-between">
+                                <div className="flex gap flex-column color-gray text-sm">
+                                  <div>{review.reviewerName}</div>
+                                  <div className="text-xs">{review.date}</div>
+                                </div>
+                                <div className="flex items-center text-xs">
+                                  ⭐({review.rating})
+                                </div>
+                              </div>
+                              <div className="text-sm py-3">{review.comment}</div>
+                              <div className="review-img__box">
+                                <div className="review-img" style={{backgroundImage: `url(${item.images})`}}></div>
+                              </div>
+                              </div>
+                            </div>
+                          ))
+                        ) : (
+                          <div className="no-review__show">No reviews yet</div>
+                        )}
+                      </div>
+                    </div>
                   </div>
                   <div className="items-faq__sec"></div>
                   <div className="related-products"></div>

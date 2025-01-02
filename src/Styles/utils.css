@@ -79,7 +79,9 @@
 .items-center {
   align-items: center;
 }
-
+.items-start{
+  align-items: start;
+}
 /* widths */
 .w-max-content {
   width: max-content;
@@ -804,4 +806,7 @@
 }
 .underline {
   text-decoration: underline;
+}
+.color-gray{
+  color: #a3a3a3c6;
 }
