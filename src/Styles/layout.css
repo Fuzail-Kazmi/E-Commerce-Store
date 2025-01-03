@@ -86,7 +86,6 @@
   background-color: #2b2b2b;
   color: #fff;
   border-radius: 0.25rem;
-  
 }
 
 /* Navbar styles */
@@ -128,7 +127,7 @@
   gap: 1.5rem;
   overflow-y: scroll;
 }
-.sidebar::-webkit-scrollbar{
+.sidebar::-webkit-scrollbar {
   display: none;
 }
 .sidebar li {
@@ -172,9 +171,8 @@
 
 .category-btn__downArrow,
 .category-btn__rightArrow {
-  cursor: pointer; 
+  cursor: pointer;
 }
-
 
 .search {
   display: flex;
@@ -312,6 +310,12 @@
   .footer-copyright {
     font-size: 0.75rem;
   }
+  .items-pg__ss-wrapper {
+    display: none;
+  }
+  .items-pg__fm-wrapper {
+    display: block;
+  }
 }
 @media (min-width: 900px) {
   .carousel-container {
@@ -380,4 +384,9 @@
     gap: 0.65rem;
     padding-left: 1.25rem;
   }
+  .fm__specifications-tags{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
 }
+
