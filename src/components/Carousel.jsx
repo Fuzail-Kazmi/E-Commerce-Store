@@ -46,12 +46,12 @@ export const Carousel = () => {
         className="carousel-box__img"
       ></div>
       {/* Left Arrow */}
-      <div className="carousel-left-arrow text-xxl">
-        <ArrowLeft onClick={prevSlide} size={22} />
+      <div className="carousel-left-arrow">
+        <ArrowLeft onClick={prevSlide} size={20} />
       </div>
       {/* Right Arrow */}
-      <div className="carousel-right-arrow text-xxl">
-        <ArrowRight onClick={nextSlide} size={22} />
+      <div className="carousel-right-arrow">
+        <ArrowRight onClick={nextSlide} size={20} />
       </div>
       <div className="carousel-foot">
         {slides.map((slide, slideIndex) => (
