@@ -57,7 +57,6 @@ export const Items = () => {
     let a = await fetch("https://dummyjson.com/products/1");
     let data = await a.json();
     setItemsData([data]);
-    console.log(data);
   };
 
   useEffect(() => {

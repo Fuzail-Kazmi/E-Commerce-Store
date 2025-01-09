@@ -6,14 +6,9 @@ export const Cart = () => {
   const [itemsData, setItemsData] = useState([]);
 
   const fetchData = async () => {
-    try {
-      let response = await fetch("https://fakestoreapi.com/products?limit=5");
-      let data = await response.json();
-      setItemsData(data);
-      console.log(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    let response = await fetch("https://fakestoreapi.com/products?limit=5");
+    let data = await response.json();
+    setItemsData(data);
   };
 
   useEffect(() => {

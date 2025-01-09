@@ -8,14 +8,9 @@ export const Wishlist = () => {
   const [itemsData, setItemsData] = useState([]);
 
   const fetchData = async () => {
-    try {
-      let response = await fetch("https://fakestoreapi.com/products?limit=5");
-      let data = await response.json();
-      setItemsData(data);
-      console.log(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    let response = await fetch("https://fakestoreapi.com/products?limit=5");
+    let data = await response.json();
+    setItemsData(data);
   };
 
   useEffect(() => {
@@ -30,7 +25,7 @@ export const Wishlist = () => {
             {itemsData.map((item) => (
               <>
                 <div
-                  className="wishlist-pg__orderBox flex space-between items-center px-2 py-2"
+                  className="wishlist-pg__orderBox flex space-between items-center gap-1 px-2 py-2"
                   key={item.id}
                 >
                   <div className="wishlist-pg__order-card ">
@@ -51,8 +46,11 @@ export const Wishlist = () => {
                       ${item.price.toFixed(2)}
                     </div>
                   </div>
-                  <NavLink to="/cart" className="wishlist-card__right-sec px-2 py-1">
-                    <MdAddShoppingCart/>
+                  <NavLink
+                    to="/cart"
+                    className="wishlist-card__right-sec px-2 py-1"
+                  >
+                    <MdAddShoppingCart />
                   </NavLink>
                 </div>
               </>

@@ -1064,4 +1064,146 @@ a {
   font-size: 1.25rem;
   border-radius: 0.25rem;
 }
-/* Login pg Styles */
+/* Log-In Pg Style */
+
+.login-pg__container {
+  padding: 1.25rem;
+}
+
+.login-pg__head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.head-pg__about {
+  color: gray;
+}
+
+.login-pg__main {
+  margin-top: 20px;
+}
+
+.label {
+  position: relative;
+}
+
+.login-pg__forgot-btn {
+  color: #0084ff;
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.label-name {
+  padding: 5px 1px;
+}
+
+.input {
+  padding: 12px 15px;
+  border: none;
+  width: 100%;
+  border-radius: .2rem;
+  box-shadow: 0px 0px 2px #4a4a4a;
+  font-size: .9rem;
+}
+
+.login-pg__foot {
+  display: grid;
+  margin: 50px 0px;
+  gap: 10px;
+}
+
+.login-foot__btn1 {
+  background-color: #0884f7;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: .5rem;
+}
+
+.login-foot__btn2 {
+  background-color: transparent;
+  padding: 13px;
+  color: #0884f7;
+  border: 1px solid #5aafff;
+  border-radius: .5rem;
+
+}
+
+/* SignUp-Pg Styling */
+
+.sign-pg__container {
+  padding: 1.25rem;
+}
+
+.sign-pg__head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.sign-pg__about {
+  margin-top: 0.625rem;
+}
+
+.sign-pg__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 0.313rem;
+}
+
+
+.sign-pg__foot {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.sign-pg__btn {
+  margin-top: 10px;
+  background-color: #0884f7;
+  color: #fff;
+  border: none;
+  padding: 0.625rem;
+  border-radius: .5rem;
+}
+
+.sign-pg__foot-about {
+  color: #626262;
+}
+
+.sign-pg__foot-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem;
+  margin-inline: 0.313rem;
+}
+
+.sign-pg__foot-btns button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: transparent;
+  border: none;
+  padding: 0.625rem;
+  border-radius: .3rem;
+  box-shadow: 0 0 2px #4a4a4a;
+}
+
+.sign-pg__foot-bottom {
+  margin-top: 1.563rem;
+}
+
+.sign-pg__foot-bottom a {
+  text-decoration: underline;
+  color: #0884f7;
+}

@@ -57,7 +57,6 @@ export const SpecilOffers = () => {
   //     let a = await fetch("https://fakestoreapi.com/products?limit=4");
   //     let data = await a.json();
   //     setofferBoxes(data);
-  //     console.log(data);
   // };
   // useEffect(() => {
   //   fetchData();

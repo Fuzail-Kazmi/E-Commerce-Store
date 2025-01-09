@@ -104,7 +104,7 @@
 .sidebar-logo {
   position: absolute;
   top: 1.25rem;
-  left: 10%;
+  left: 5%;
   height: 10px;
   color: #ffffff;
   cursor: pointer;
@@ -229,6 +229,9 @@
   .badge-name {
     font-size: 0.75rem;
   }
+  .sidebar-logo {
+    left: 10%;
+  }
 }
 @media (min-width: 500px) {
   .related-product__main {
@@ -241,6 +244,11 @@
 @media (min-width: 600px) {
   .special-sec__img {
     height: 150px;
+  }
+  .sign-pg__container,
+  .login-pg__container {
+      max-width: 550px;
+      margin-inline: auto;
   }
 }
 @media (min-width: 768px) {
@@ -399,6 +407,9 @@
     height: 190px;
     padding: 0.5rem;
   }
+  .login-pg__foot {
+      margin: 50px 0px;
+  }
 }
 @media (min-width: 1200px) {
   .menu-box {
@@ -432,4 +443,10 @@
     grid-template-columns: repeat(4,1fr);
   }
 }
+
+
+
+
+
+
 
